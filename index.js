@@ -5,7 +5,7 @@ const { Kafka } = require('kafkajs')
 const kafka = new Kafka({
   clientId: 'my-app',
   brokers: [
-	  'my-kafka-0.my-kafka-headless.kafka-adsoftsito.svc.cluster.local:9092'
+	  'my-kafka-0.my-kafka-headless.lilliamwitham.svc.cluster.local:9092'
 	  ]
 });
 
@@ -15,7 +15,7 @@ const app = express();
 app.use(cors());
 app.options('*', cors());
 
-const port = 8080;
+const port = 8081;
 
 app.get('/', (req, res, next) => {
   res.send('kafka api - adsoft');
